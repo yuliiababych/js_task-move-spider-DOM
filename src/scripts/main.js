@@ -1,8 +1,6 @@
 'use strict';
 
 document.addEventListener('click', (e) => {
-  e.preventDefault();
-
   const wall = document.querySelector('.wall');
   const spider = document.querySelector('.spider');
 
@@ -14,6 +12,8 @@ document.addEventListener('click', (e) => {
     e.clientY >= wallRect.top &&
     e.clientY <= wallRect.bottom
   ) {
+    e.preventDefault();
+
     const wallY = wall.clientHeight;
     const wallX = wall.clientWidth;
     const spiderX = spider.clientWidth;
