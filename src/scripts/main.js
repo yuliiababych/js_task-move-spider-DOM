@@ -16,15 +16,15 @@ document.addEventListener('click', (e) => {
 
     const wallY = wall.clientHeight;
     const wallX = wall.clientWidth;
+
     const spiderX = spider.clientWidth;
     const spiderY = spider.clientHeight;
+
     const clickX = e.offsetX;
     const clickY = e.offsetY;
 
     const maxX = wallX - spiderX;
     const maxY = wallY - spiderY;
-
-    spider.style.position = 'absolute';
 
     spider.style.left =
       Math.max(0, Math.min(clickX - spiderX / 2, maxX)) + 'px';
